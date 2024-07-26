@@ -1,0 +1,11 @@
+{
+    "time_signatures": [
+        {
+            "numerator": 4,
+            "denominator": 4,
+            "measures": 1013,
+            "bpm": 120
+        }
+    ],
+    "initial_offset_ms": -35
+}
