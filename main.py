@@ -70,7 +70,7 @@ def create_video_with_text(song, output_audio, output_video, album_art_path):
         for _ in range(1, measures + 1):
             txt = f"Time Signature: {time_signature}\nTempo: {bpm} BPM\nMeasure: {current_measure}"
             txt_clip = TextClip(txt, fontsize=24, color='white', bg_color='black', size=(1280, 720)).set_duration(measure_duration)
-            txt_clip = txt_clip.set_start(current_time)
+            txt_clip = txt_clip.set_position(('center', 'bottom')).set_start(current_time)
             clips.append(txt_clip)
             current_time += measure_duration
             current_measure += 1
@@ -96,7 +96,7 @@ def create_video_with_text(song, output_audio, output_video, album_art_path):
     video = CompositeVideoClip(clips, size=(1280, 720)).set_duration(current_time)
     audio = AudioFileClip(output_audio).set_duration(current_time)
     video = video.set_audio(audio)
-    video.write_videofile(output_video, codec='libx264', fps=24)
+    video.write_videofile(output_video, codec='libx264', fps=24, threads=16, preset='ultrafast')
     print(f"Video generated successfully: {output_video}")
 
 input_file_path = 'Atlas Stone.json'
