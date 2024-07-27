@@ -21,9 +21,291 @@
         {
             "numerator": 11,
             "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 17,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 13,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 16,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 32,
+            "bpm": 420
+        },
+        {
+            "numerator": 6,
+            "denominator": 4,
+            "measures": 8,
+            "bpm": 105
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
             "measures": 30,
             "bpm": 420
         }
     ],
-    "initial_offset_ms": 110
+    "initial_offset_ms": 120
 }

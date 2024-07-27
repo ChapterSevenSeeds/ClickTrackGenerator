@@ -47,6 +47,7 @@ def create_video_with_text(song, output_audio, output_video):
     clips = []
     
     current_time = 0.0
+    current_measure = 1
     for signature in song['time_signatures']:
         bpm = signature['bpm']
         time_signature = f"{signature['numerator']}/{signature['denominator']}"
@@ -59,12 +60,13 @@ def create_video_with_text(song, output_audio, output_video):
         beat_duration = 60.0 / bpm
         measure_duration = beat_duration * signature['numerator']
         
-        for measure in range(1, measures + 1):
-            txt = f"Time Signature: {time_signature}\nTempo: {bpm} BPM\nMeasure: {measure}"
+        for _ in range(1, measures + 1):
+            txt = f"Time Signature: {time_signature}\nTempo: {bpm} BPM\nMeasure: {current_measure}"
             txt_clip = TextClip(txt, fontsize=24, color='white', bg_color='black', size=(1280, 720)).set_duration(measure_duration)
             txt_clip = txt_clip.set_start(current_time)
             clips.append(txt_clip)
             current_time += measure_duration
+            current_measure += 1
         
         if offset < 0:
             current_time += abs(offset)
