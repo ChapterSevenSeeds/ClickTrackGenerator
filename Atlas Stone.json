@@ -1,15 +1,12 @@
 {
+    "title": "Atlas Stone",
+    "album": "The Mountain",
+    "artist": "Haken",
     "time_signatures": [
-        {
-            "numerator": 10,
-            "denominator": 8,
-            "measures": 1,
-            "bpm": 420
-        },
         {
             "numerator": 11,
             "denominator": 8,
-            "measures": 73,
+            "measures": 74,
             "bpm": 420
         },
         {
@@ -238,6 +235,190 @@
             "numerator": 6,
             "denominator": 4,
             "measures": 8,
+            "bpm": 105,
+            "offset": 15
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 3,
+            "bpm": 420
+        },
+        {
+            "numerator": 10,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 18,
+            "bpm": 420,
+            "offset": 15
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 9,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 9,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 9,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 9,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 16,
+            "bpm": 420,
+            "offset": 15
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 9,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 9,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 9,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 9,
+            "denominator": 8,
+            "measures": 1,
+            "bpm": 420
+        },
+        {
+            "numerator": 11,
+            "denominator": 8,
+            "measures": 16,
+            "bpm": 420,
+            "offset": 10
+        },
+        {
+            "numerator": 6,
+            "denominator": 4,
+            "measures": 8,
             "bpm": 105
         },
         {
@@ -245,67 +426,7 @@
             "denominator": 8,
             "measures": 3,
             "bpm": 420
-        },
-        {
-            "numerator": 10,
-            "denominator": 8,
-            "measures": 1,
-            "bpm": 420
-        },
-        {
-            "numerator": 11,
-            "denominator": 8,
-            "measures": 3,
-            "bpm": 420
-        },
-        {
-            "numerator": 10,
-            "denominator": 8,
-            "measures": 1,
-            "bpm": 420
-        },
-        {
-            "numerator": 11,
-            "denominator": 8,
-            "measures": 3,
-            "bpm": 420
-        },
-        {
-            "numerator": 10,
-            "denominator": 8,
-            "measures": 1,
-            "bpm": 420
-        },
-        {
-            "numerator": 11,
-            "denominator": 8,
-            "measures": 3,
-            "bpm": 420
-        },
-        {
-            "numerator": 10,
-            "denominator": 8,
-            "measures": 1,
-            "bpm": 420
-        },
-        {
-            "numerator": 11,
-            "denominator": 8,
-            "measures": 3,
-            "bpm": 420
-        },
-        {
-            "numerator": 10,
-            "denominator": 8,
-            "measures": 1,
-            "bpm": 420
-        },
-        {
-            "numerator": 11,
-            "denominator": 8,
-            "measures": 30,
-            "bpm": 420
         }
     ],
-    "initial_offset_ms": 120
+    "initial_offset_ms": -40
 }

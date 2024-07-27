@@ -6,13 +6,17 @@ def load_audio(file_path):
     return AudioSegment.from_file(file_path)
 
 def generate_click_track(song, downbeat_file, non_downbeat_file, output_file):
-    downbeat = load_audio(downbeat_file)
-    non_downbeat = load_audio(non_downbeat_file)
+    downbeat = load_audio(downbeat_file) + 10
+    non_downbeat = load_audio(non_downbeat_file) + 10
     
     final_track = AudioSegment.silent(duration=0)
     
     for signature in song['time_signatures']:
         beat_duration_ms = (60 / signature['bpm']) * 1000  # convert to milliseconds
+        offset = signature.get('offset', 0)  # get the offset, default to 0 if not provided
+
+        if offset > 0:
+            final_track += AudioSegment.silent(duration=offset)
         
         for measure in range(signature['measures']):
             for beat in range(signature['numerator']):
@@ -20,6 +24,9 @@ def generate_click_track(song, downbeat_file, non_downbeat_file, output_file):
                     final_track += downbeat[:beat_duration_ms]
                 else:
                     final_track += non_downbeat[:beat_duration_ms]
+
+        if offset < 0:
+            final_track += AudioSegment.silent(duration=-offset)
     
     return final_track
 
@@ -43,7 +50,7 @@ def overlay_click_track(song_file, click_track, output_file, offset_ms):
     overlaid_track.export(output_file, format="wav")
     print(f"Overlaid track generated successfully: {output_file}")
 
-def create_video_with_text(song, output_audio, output_video):
+def create_video_with_text(song, output_audio, output_video, album_art_path):
     clips = []
     
     current_time = 0.0
@@ -71,6 +78,21 @@ def create_video_with_text(song, output_audio, output_video):
         if offset < 0:
             current_time += abs(offset)
     
+    # Load album art
+    album_art = ImageClip(album_art_path).set_duration(current_time).resize(height=360)  # Adjust size as needed
+    album_art = album_art.set_position(('center', 'center'))
+
+    # Title and album text
+    title_clip = TextClip(song["title"], fontsize=40, color='white', bg_color='black', size=(1280, 60)).set_duration(current_time)
+    album_clip = TextClip(song["album"], fontsize=30, color='white', bg_color='black', size=(1280, 50)).set_duration(current_time)
+    
+    title_clip = title_clip.set_position(('center', 'top'))
+    album_clip = album_clip.set_position(('center', title_clip.size[1]))
+
+    clips.insert(0, title_clip)
+    clips.insert(1, album_clip)
+    clips.insert(2, album_art)
+
     video = CompositeVideoClip(clips, size=(1280, 720)).set_duration(current_time)
     audio = AudioFileClip(output_audio).set_duration(current_time)
     video = video.set_audio(audio)
@@ -83,10 +105,11 @@ non_downbeat_file_path = 'up.wav'
 song_file_path = "C:/Users/Tyson/Music/iTunes/iTunes Media/Music/Haken/The Mountain/02 Atlas Stone.m4a"
 output_file_path = 'output.wav'
 output_video_path = 'output.mp4'
+album_art_path = 'The Mountain Album Art.jpg'
 
 with open(input_file_path, 'r') as file:
     song = json.load(file)
 
 click_track = generate_click_track(song, downbeat_file_path, non_downbeat_file_path, output_file_path)
 overlay_click_track(song_file_path, click_track, output_file_path, song["initial_offset_ms"])
-create_video_with_text(song, output_file_path, output_video_path)
+create_video_with_text(song, output_file_path, output_video_path, album_art_path)
