@@ -30,27 +30,25 @@ def generate_click_track(song, downbeat_file, non_downbeat_file, output_file):
     
     return final_track
 
-def overlay_click_track(song_file, click_track, output_file, offset_ms):
+def overlay_click_track(song_file, click_track, output_file, global_offset_ms):
     song = load_audio(song_file)
     
-    if offset_ms > 0:
-        # Positive offset: add silence at the beginning of the click track
-        click_track = AudioSegment.silent(duration=offset_ms) + click_track
-    elif offset_ms < 0:
-        # Negative offset: add silence at the beginning of the song
-        song = AudioSegment.silent(duration=-offset_ms) + song
+    if global_offset_ms > 0:
+        click_track = AudioSegment.silent(duration=global_offset_ms) + click_track
+    elif global_offset_ms < 0:
+        song = AudioSegment.silent(duration=-global_offset_ms) + song
     
-    # Ensure the click track matches the song length
-    if len(click_track) > len(song):
-        click_track = click_track[:len(song)]
-    else:
-        click_track = click_track + AudioSegment.silent(duration=(len(song) - len(click_track)))
+    # Ensure the click track is at least as long as the song
+    if len(click_track) < len(song):
+        click_track += AudioSegment.silent(duration=(len(song) - len(click_track)))
     
     overlaid_track = song.overlay(click_track)
     overlaid_track.export(output_file, format="wav")
     print(f"Overlaid track generated successfully: {output_file}")
 
-def create_video_with_text(song, output_audio, output_video, album_art_path):
+    return len(overlaid_track) / 1000.0
+
+def create_video_with_text(song, output_audio, output_video, album_art_path, total_duration):
     clips = []
 
     # Positioning of album art and time signature information
@@ -59,6 +57,7 @@ def create_video_with_text(song, output_audio, output_video, album_art_path):
     
     current_time = 0.0
     current_measure = 1
+    last_clip = None
     for signature in song['time_signatures']:
         bpm = signature['bpm']
         time_signature = f"{signature['numerator']}/{signature['denominator']}"
@@ -78,17 +77,23 @@ def create_video_with_text(song, output_audio, output_video, album_art_path):
             clips.append(txt_clip)
             current_time += measure_duration
             current_measure += 1
+            last_clip = txt_clip
         
         if offset < 0:
             current_time += abs(offset)
     
+    if last_clip is not None:
+        last_clip = last_clip.set_duration(total_duration - last_clip.start)
+        clips.append(last_clip)
+
+
     # Load album art
-    album_art = ImageClip(album_art_path).set_start(0).set_duration(current_time).resize(height=360).set_position(('center', 'center'))  # Adjust size as needed
+    album_art = ImageClip(album_art_path).set_start(0).set_duration(total_duration).resize(height=360).set_position(('center', 'center'))  # Adjust size as needed
 
     # Title and album text
-    title_clip = TextClip(song["title"], fontsize=40, color='white', bg_color='black').set_start(0).set_duration(current_time)
-    album_clip = TextClip(song["album"], fontsize=30, color='white', bg_color='black').set_start(0).set_duration(current_time)
-    artist_clip = TextClip(song["artist"], fontsize=30, color='white', bg_color='black').set_start(0).set_duration(current_time)
+    title_clip = TextClip(song["title"], fontsize=40, color='white', bg_color='black').set_start(0).set_duration(total_duration)
+    album_clip = TextClip(song["album"], fontsize=30, color='white', bg_color='black').set_start(0).set_duration(total_duration)
+    artist_clip = TextClip(song["artist"], fontsize=30, color='white', bg_color='black').set_start(0).set_duration(total_duration)
     
     title_clip = title_clip.set_position(('center', 'top')).margin(top=20)
     album_clip = album_clip.set_position(('center', title_clip.size[1]))
@@ -99,8 +104,8 @@ def create_video_with_text(song, output_audio, output_video, album_art_path):
     clips.insert(2, artist_clip)
     clips.insert(3, album_art)
 
-    video = CompositeVideoClip(clips, size=(1280, 720)).set_duration(current_time)
-    audio = AudioFileClip(output_audio).set_duration(current_time)
+    video = CompositeVideoClip(clips, size=(1280, 720)).set_duration(total_duration)
+    audio = AudioFileClip(output_audio).set_duration(total_duration)
     video = video.set_audio(audio)
     video.write_videofile(output_video, codec='libx264', fps=24)
     print(f"Video generated successfully: {output_video}")
@@ -117,5 +122,5 @@ with open(input_file_path, 'r') as file:
     song = json.load(file)
 
 click_track = generate_click_track(song, downbeat_file_path, non_downbeat_file_path, output_file_path)
-overlay_click_track(song_file_path, click_track, output_file_path, song["initial_offset_ms"])
-create_video_with_text(song, output_file_path, output_video_path, album_art_path)
+total_length = overlay_click_track(song_file_path, click_track, output_file_path, song["initial_offset_ms"])
+create_video_with_text(song, output_file_path, output_video_path, album_art_path, total_length)
