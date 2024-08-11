@@ -1,0 +1,14 @@
+{
+    "title": "Water Me",
+    "album": "Snakeybus OST",
+    "artist": "Unknown",
+    "time_signatures": [
+        {
+            "numerator": 4,
+            "denominator": 4,
+            "measures": 56,
+            "bpm": 90
+        }
+    ],
+    "initial_offset_ms": -15
+}

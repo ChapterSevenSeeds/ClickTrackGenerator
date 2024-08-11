@@ -52,6 +52,10 @@ def overlay_click_track(song_file, click_track, output_file, offset_ms):
 
 def create_video_with_text(song, output_audio, output_video, album_art_path):
     clips = []
+
+    # Positioning of album art and time signature information
+    album_art_position_y = (720 - 360) / 2  # Center vertically with a 720p height, album art height is 360
+    time_signature_y = album_art_position_y + 360 + 40  # Position time signatures just below the album art
     
     current_time = 0.0
     current_measure = 1
@@ -69,8 +73,8 @@ def create_video_with_text(song, output_audio, output_video, album_art_path):
         
         for _ in range(1, measures + 1):
             txt = f"Time Signature: {time_signature}\nTempo: {bpm} BPM\nMeasure: {current_measure}"
-            txt_clip = TextClip(txt, fontsize=24, color='white', bg_color='black', size=(1280, 720)).set_duration(measure_duration)
-            txt_clip = txt_clip.set_position(('center', 'bottom')).set_start(current_time)
+            txt_clip = TextClip(txt, fontsize=24, color='white').set_duration(measure_duration)
+            txt_clip = txt_clip.set_position(('center', time_signature_y)).set_start(current_time)
             clips.append(txt_clip)
             current_time += measure_duration
             current_measure += 1
@@ -79,24 +83,26 @@ def create_video_with_text(song, output_audio, output_video, album_art_path):
             current_time += abs(offset)
     
     # Load album art
-    album_art = ImageClip(album_art_path).set_duration(current_time).resize(height=360)  # Adjust size as needed
-    album_art = album_art.set_position(('center', 'center'))
+    album_art = ImageClip(album_art_path).set_start(0).set_duration(current_time).resize(height=360).set_position(('center', 'center'))  # Adjust size as needed
 
     # Title and album text
-    title_clip = TextClip(song["title"], fontsize=40, color='white', bg_color='black', size=(1280, 60)).set_duration(current_time)
-    album_clip = TextClip(song["album"], fontsize=30, color='white', bg_color='black', size=(1280, 50)).set_duration(current_time)
+    title_clip = TextClip(song["title"], fontsize=40, color='white', bg_color='black').set_start(0).set_duration(current_time)
+    album_clip = TextClip(song["album"], fontsize=30, color='white', bg_color='black').set_start(0).set_duration(current_time)
+    artist_clip = TextClip(song["artist"], fontsize=30, color='white', bg_color='black').set_start(0).set_duration(current_time)
     
-    title_clip = title_clip.set_position(('center', 'top'))
+    title_clip = title_clip.set_position(('center', 'top')).margin(top=20)
     album_clip = album_clip.set_position(('center', title_clip.size[1]))
+    artist_clip = artist_clip.set_position(('center', album_clip.size[1] + title_clip.size[1]))
 
     clips.insert(0, title_clip)
     clips.insert(1, album_clip)
-    clips.insert(2, album_art)
+    clips.insert(2, artist_clip)
+    clips.insert(3, album_art)
 
     video = CompositeVideoClip(clips, size=(1280, 720)).set_duration(current_time)
     audio = AudioFileClip(output_audio).set_duration(current_time)
     video = video.set_audio(audio)
-    video.write_videofile(output_video, codec='libx264', fps=24, threads=16, preset='ultrafast')
+    video.write_videofile(output_video, codec='libx264', fps=24)
     print(f"Video generated successfully: {output_video}")
 
 input_file_path = 'Atlas Stone.json'
