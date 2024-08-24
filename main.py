@@ -48,14 +48,14 @@ def overlay_click_track(song_file, click_track, output_file, global_offset_ms):
 
     return len(overlaid_track) / 1000.0
 
-def create_video_with_text(song, output_audio, output_video, album_art_path, total_duration):
+def create_video_with_text(song, output_audio, output_video, album_art_path, total_duration, global_offset_ms):
     clips = []
 
     # Positioning of album art and time signature information
     album_art_position_y = (720 - 360) / 2  # Center vertically with a 720p height, album art height is 360
     time_signature_y = album_art_position_y + 360 + 40  # Position time signatures just below the album art
     
-    current_time = 0.0
+    current_time = global_offset_ms / 1000.0  # Start after the global offset
     current_measure = 1
     last_clip = None
     for signature in song['time_signatures']:
@@ -123,4 +123,4 @@ with open(input_file_path, 'r') as file:
 
 click_track = generate_click_track(song, downbeat_file_path, non_downbeat_file_path, output_file_path)
 total_length = overlay_click_track(song_file_path, click_track, output_file_path, song["initial_offset_ms"])
-create_video_with_text(song, output_file_path, output_video_path, album_art_path, total_length)
+create_video_with_text(song, output_file_path, output_video_path, album_art_path, total_length, song["initial_offset_ms"])
