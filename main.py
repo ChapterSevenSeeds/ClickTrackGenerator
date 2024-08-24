@@ -110,10 +110,10 @@ def create_video_with_text(song, output_audio, output_video, album_art_path, tot
     video.write_videofile(output_video, codec='libx264', fps=24)
     print(f"Video generated successfully: {output_video}")
 
-input_file_path = 'Atlas Stone.json'
+input_file_path = 'Sempiternal Beings.json'
 downbeat_file_path = 'down.wav'
 non_downbeat_file_path = 'up.wav'
-song_file_path = "C:/Users/Tyson/Music/iTunes/iTunes Media/Music/Haken/The Mountain/02 Atlas Stone.m4a"
+song_file_path = r"C:\Users\Tyson\Music\iTunes\iTunes Media\Music\Haken\Fauna\1-04 Sempiternal Beings.m4a"
 output_file_path = 'output.wav'
 output_video_path = 'output.mp4'
 album_art_path = 'The Mountain Album Art.jpg'
@@ -123,4 +123,4 @@ with open(input_file_path, 'r') as file:
 
 click_track = generate_click_track(song, downbeat_file_path, non_downbeat_file_path, output_file_path)
 total_length = overlay_click_track(song_file_path, click_track, output_file_path, song["initial_offset_ms"])
-create_video_with_text(song, output_file_path, output_video_path, album_art_path, total_length)
+# create_video_with_text(song, output_file_path, output_video_path, album_art_path, total_length)
