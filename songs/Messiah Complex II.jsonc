@@ -29,17 +29,10 @@
         },
         // Alternate phrase
         {
-            "numerator": 33,
+            "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
-            "measures": 1,
-            "bpm": 560
-        },
-        {
-            "numerator": 39,
-            "denominator": 8,
-            "sub_beat_multiplier": 3,
-            "measures": 1,
+            "measures": 6,
             "bpm": 560
         },
         // Verse 1
