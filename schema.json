@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "required": [
+        "initial_offset_ms",
+        "time_signatures",
+        "title",
+        "album",
+        "artist"
+    ],
+    "properties": {
+        "title": {
+            "type": "string",
+            "description": "The song title."
+        },
+        "album": {
+            "type": "string",
+            "description": "The song album."
+        },
+        "artist": {
+            "type": "string",
+            "description": "The song artist."
+        },
+        "initial_offset_ms": {
+            "type": "integer",
+            "description": "Offset the entire click track by this number of milliseconds when doing the overlay."
+        },
+        "time_signatures": {
+            "type": "array",
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "type": "object",
+                "required": [
+                    "numerator",
+                    "denominator",
+                    "measures",
+                    "bpm"
+                ],
+                "properties": {
+                    "numerator": {
+                        "type": "integer",
+                        "description": "The time signature numerator."
+                    },
+                    "denominator": {
+                        "type": "integer",
+                        "description": "The time siganture denominator."
+                    },
+                    "sub_beat_multiplier": {
+                        "type": "integer",
+                        "description": "Play a sub-beat click every nth numerator click (e.g. to give 12/8 a 4/4 division)."
+                    },
+                    "measures": {
+                        "type": "integer",
+                        "description": "The number of measures to play this time signature."
+                    },
+                    "bpm": {
+                        "type": "integer",
+                        "description": "The number of ticks of the numerator per minute."
+                    },
+                    "offset": {
+                        "type": "integer",
+                        "description": "Offset this time signature by this number of milliseconds."
+                    }
+                }
+            }
+        }
+    }
+}

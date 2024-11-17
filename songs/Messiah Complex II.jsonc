@@ -1,0 +1,200 @@
+{
+    "title": "Messiah Complex II: A Glutton For Punishment",
+    "artist": "Haken",
+    "album": "Virus",
+    "time_signatures": [
+        // Opening phrase
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 6,
+            "bpm": 560
+        },
+        // Everyone else comes in
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 8,
+            "bpm": 560
+        },
+        // Repeat the phrase
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 8,
+            "bpm": 560
+        },
+        // Alternate phrase
+        {
+            "numerator": 33,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 1,
+            "bpm": 560
+        },
+        {
+            "numerator": 39,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 1,
+            "bpm": 560
+        },
+        // Verse 1
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 16,
+            "bpm": 560
+        },
+        // Chorus intro
+        {
+            "numerator": 18,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 1,
+            "bpm": 560
+        },
+        // Chorus
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 2,
+            "bpm": 560
+        },
+        {
+            "numerator": 18,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 1,
+            "bpm": 560
+        },
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 2,
+            "bpm": 560
+        },
+        {
+            "numerator": 18,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 1,
+            "bpm": 560
+        },
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 2,
+            "bpm": 560
+        },
+        {
+            "numerator": 18,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 1,
+            "bpm": 560
+        },
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 2,
+            "bpm": 560
+        },
+        // Verse 2
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 16,
+            "bpm": 560
+        },
+        // Chorus 2?
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 16,
+            "bpm": 560,
+            "offset": -20
+        },
+        // Instrumental section
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 7,
+            "bpm": 560
+        },
+        {
+            "numerator": 18,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 1,
+            "bpm": 560
+        },
+        // Long chords section?
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 6,
+            "bpm": 560
+        },
+        {
+            "numerator": 18,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 1,
+            "bpm": 560
+        },
+        // Middle eastern section
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 16,
+            "bpm": 560
+        },
+        // Verse 3?
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 16,
+            "bpm": 560
+        },
+        // Chorus 3?
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 16,
+            "bpm": 560
+        },
+        // Outro before the time change
+        {
+            "numerator": 12,
+            "denominator": 8,
+            "sub_beat_multiplier": 3,
+            "measures": 8,
+            "bpm": 560
+        },
+        // Outro
+        {
+            "numerator": 6,
+            "denominator": 4,
+            "measures": 4,
+            "bpm": 140,
+            "offset": 20
+        }
+    ],
+    "initial_offset_ms": -35
+}
