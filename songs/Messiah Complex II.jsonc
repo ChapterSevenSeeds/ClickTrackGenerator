@@ -8,14 +8,16 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 6,
-            "bpm": 560
+            "bpm": 560,
         },
         // Everyone else comes in
         {
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 8,
             "bpm": 560
         },
@@ -24,6 +26,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 8,
             "bpm": 560
         },
@@ -32,6 +35,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 6,
             "bpm": 560
         },
@@ -40,6 +44,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 16,
             "bpm": 560
         },
@@ -48,6 +53,7 @@
             "numerator": 18,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 1,
             "bpm": 560
         },
@@ -56,6 +62,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 2,
             "bpm": 560
         },
@@ -63,6 +70,7 @@
             "numerator": 18,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 1,
             "bpm": 560
         },
@@ -70,6 +78,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 2,
             "bpm": 560
         },
@@ -77,6 +86,7 @@
             "numerator": 18,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 1,
             "bpm": 560
         },
@@ -84,6 +94,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 2,
             "bpm": 560
         },
@@ -91,6 +102,7 @@
             "numerator": 18,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 1,
             "bpm": 560
         },
@@ -98,6 +110,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 2,
             "bpm": 560
         },
@@ -106,6 +119,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 16,
             "bpm": 560
         },
@@ -114,6 +128,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 16,
             "bpm": 560,
             "offset": -20
@@ -123,6 +138,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 7,
             "bpm": 560
         },
@@ -130,6 +146,7 @@
             "numerator": 18,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 1,
             "bpm": 560
         },
@@ -138,6 +155,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 6,
             "bpm": 560
         },
@@ -145,6 +163,7 @@
             "numerator": 18,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 1,
             "bpm": 560
         },
@@ -153,6 +172,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 16,
             "bpm": 560
         },
@@ -161,6 +181,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 16,
             "bpm": 560
         },
@@ -169,6 +190,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 16,
             "bpm": 560
         },
@@ -177,6 +199,7 @@
             "numerator": 12,
             "denominator": 8,
             "sub_beat_multiplier": 3,
+            "sub_beats_as_upbeats": true,
             "measures": 8,
             "bpm": 560
         },

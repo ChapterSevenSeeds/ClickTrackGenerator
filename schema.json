@@ -54,12 +54,16 @@
                         "description": "The number of measures to play this time signature."
                     },
                     "bpm": {
-                        "type": "integer",
+                        "type": "number",
                         "description": "The number of ticks of the numerator per minute."
                     },
                     "offset": {
                         "type": "integer",
                         "description": "Offset this time signature by this number of milliseconds."
+                    },
+                    "sub_beats_as_upbeats": {
+                        "type": "boolean",
+                        "description": "If sub_beat_multiplier is specified, setting this to true will will treat the subbeats as upbeats, skipping the actual upbeats."
                     }
                 }
             }
