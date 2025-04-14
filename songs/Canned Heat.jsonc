@@ -1,0 +1,14 @@
+{
+    "title": "Canned Heat",
+    "album": "",
+    "artist": "",
+    "time_signatures": [
+        {
+            "numerator": 4,
+            "denominator": 4,
+            "measures": 120,
+            "bpm": 128
+        }
+    ],
+    "initial_offset_ms": -35
+}

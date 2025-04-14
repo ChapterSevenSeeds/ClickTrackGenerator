@@ -114,6 +114,7 @@ def overlay_click_track(song_file, click_track, output_file, global_offset_ms):
     if len(click_track) < len(song):
         click_track += AudioSegment.silent(duration=(len(song) - len(click_track)))
 
+    click_track -= 10
     overlaid_track = song.overlay(click_track)
     overlaid_track.export(output_file, format="wav")
     print(f"Overlaid track generated successfully: {output_file}")
@@ -185,11 +186,11 @@ def create_video_with_text(song, output_audio, output_video, album_art_path, tot
     print(f"Video generated successfully: {output_video}")
 
 
-input_file_path = 'songs/Panic Attack.jsonc'
+input_file_path = 'songs/Canned Heat.jsonc'
 downbeat_file_path = 'down.wav'
 non_downbeat_file_path = 'up.wav'
 subbeat_file_path = "subbeat.wav"
-song_file_path = r"C:\Users\Tyson\Music\iTunes\iTunes Media\Music\Dream Theater\Octavarium\05 Panic Attack.m4a"
+song_file_path = r"/home/tysonjones/Downloads/Jamiroquai - Canned Heat [vE4VlA_9OrI].mp3"
 output_file_path = 'output.wav'
 output_video_path = 'output.mp4'
 album_art_path = 'art/Virus Album Art.jpg'
