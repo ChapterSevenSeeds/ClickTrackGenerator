@@ -186,11 +186,11 @@ def create_video_with_text(song, output_audio, output_video, album_art_path, tot
     print(f"Video generated successfully: {output_video}")
 
 
-input_file_path = 'songs/Canned Heat.jsonc'
+input_file_path = 'songs/Messiah Complex III.jsonc'
 downbeat_file_path = 'down.wav'
 non_downbeat_file_path = 'up.wav'
 subbeat_file_path = "subbeat.wav"
-song_file_path = r"/home/tysonjones/Downloads/Jamiroquai - Canned Heat [vE4VlA_9OrI].mp3"
+song_file_path = r"C:\Users\balli\Music\iTunes\iTunes Media\Music\Haken\Virus\1-08 Messiah Complex III_ Marigold.m4a"
 output_file_path = 'output.wav'
 output_video_path = 'output.mp4'
 album_art_path = 'art/Virus Album Art.jpg'
